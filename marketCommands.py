@@ -19,14 +19,18 @@ address_juhansen = "ronin:5cf795606a2e7091b935c42c037a4758dc00e681"
 address_axiebobshop = "ronin:dc683a32553d8de5828ec1364df4b7ae6f98a66b"
 address_ivy = "ronin:d8a7e07286e35dbcc6bb1c8bfa1ca758272fe130"
 
-# unlistAxie(axieId):                           [axieId: int]
-# unlistAxies(axieId_list)                      [axieId_list: list of ints]
-# listAxie(axieId):                             [axieId: int]
-# transferAxie(axieId, transferRonin)           [axieId: int], [transferRonin: ronin address starting with 'ronin:']
-# transferAxies(axieId_list, transferRonin)     [axieId_list: list of ints], [transferRonin-ronin address starting with 'ronin:']
-# selectWallet(wallet_index)                    [wallet_index: int, defined at top]
-# buyAxie(axieId)                               [axieId: int]
-# hatchAxies(Ronin)                             [Ronin: ronin address starting with 'ronin:']
+# unlistAxie(axieId)                                    [axieId: int]
+# unlistAxies(axieId_list)                              [axieId_list: list of ints]
+# listAxie(axieId, priceEth)                            [axieId: int], [priceEth: float]
+# listAuction(axieId, startPrice, endPrice, duration)   [axieId: int], [startPrice: float], [endPrice: float], [duration: int(days)]
+# transferAxie(axieId, transferRonin)                   [axieId: int], [transferRonin: ronin address starting with 'ronin:']
+# transferAxies(axieId_list, transferRonin)             [axieId_list: list of ints], [transferRonin-ronin address starting with 'ronin:']
+# selectWallet(wallet_index)                            [wallet_index: int, defined at top]
+# buyAxie(axieId)                                       [axieId: int]
+# hatchAxies(Ronin)                                     [Ronin: ronin address starting with 'ronin:']
+# relistAxie(axieId, priceEth)                          [axieId: int], [priceEth: float]
+# relistAuction(axieId, startPrice, endPrice, duration) [axieId: int], [startPrice: float], [endPrice: float], [duration: int(days)]
+# getBalance                                            gets balance of current selected wallet, no args
 
 def unlistAxie(axieId):
     argstart = "node scripts\\unlistjs\\unlistAxie.js"
